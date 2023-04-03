@@ -3,7 +3,7 @@ import {GeneralContainer, Wrapper} from "./Menu.elements"
 import Properties from "../Properties/Properties"
 import Rings from "../Ring/Rings"
 import Futer from "../Futer/Futer"
-import Render3D from "../Ring/Render3d";
+import Render3d from "../Render3d";
 
 const Menu = () => {
     const [currentRotateOne, setCurrentRotateOne] = useState({name: "a1"})
@@ -13,7 +13,7 @@ const Menu = () => {
     return (
         <div>
             <GeneralContainer>
-                <Wrapper>
+                {/*<Wrapper>*/}
                     <Properties
                         setCurrentRotateOne={setCurrentRotateOne}
                         setCurrentRotateTwo={setCurrentRotateTwo}
@@ -30,8 +30,8 @@ const Menu = () => {
                     {/*    currentRotateThree={currentRotateThree}*/}
                     {/*    currentRotateFour={currentRotateFour}*/}
                     {/*/>*/}
-                    <Render3D/>
-                </Wrapper>
+                    <Render3d/>
+                {/*</Wrapper>*/}
             </GeneralContainer>
             <Futer/>
         </div>
