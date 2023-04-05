@@ -9,7 +9,6 @@ import * as dat from 'dat.gui'
 const Render3D = () => {
 
     const mountRef = useRef(null)
-    // const path = `./../../../uploads/doorDraco.gltf`
     const path = `./../../../uploads/door2Door.gltf`
 
     useEffect(() => {
@@ -17,8 +16,6 @@ const Render3D = () => {
         const gui = new dat.GUI({ width: 400 })
         const sceneParams = {
             envMapIntensity: 0.38
-            // dlColor: 0xf71257,
-            // alColor: 0x1ae2d8,
         }
 
         const {clientWidth: width, clientHeight: height} = currentRef;
@@ -133,10 +130,6 @@ const Render3D = () => {
             scene.add(gltf.scene)
         })
 
-        // const controls = new function () {
-        //     gltf.scene.children[1].visible = false
-        // };
-
         //Animate the scene
         const animate = () => {
             orbitControls.update();
@@ -153,14 +146,12 @@ const Render3D = () => {
     }, []);
 
     return (
-        <div>
             <div
                 className='Contenedor3D'
                 ref={mountRef}
                 style={{width: "100%", height: "100vh"}}
             >
             </div>
-        </div>
     )
 }
 

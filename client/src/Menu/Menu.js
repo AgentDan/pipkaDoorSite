@@ -13,7 +13,7 @@ const Menu = () => {
     return (
         <div>
             <GeneralContainer>
-                {/*<Wrapper>*/}
+                <Wrapper>
                     <Properties
                         setCurrentRotateOne={setCurrentRotateOne}
                         setCurrentRotateTwo={setCurrentRotateTwo}
@@ -31,7 +31,7 @@ const Menu = () => {
                     {/*    currentRotateFour={currentRotateFour}*/}
                     {/*/>*/}
                     <Render3d/>
-                {/*</Wrapper>*/}
+                </Wrapper>
             </GeneralContainer>
             <Futer/>
         </div>
