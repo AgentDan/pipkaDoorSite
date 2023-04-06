@@ -73,7 +73,6 @@ const Ring = ({ currentRotateOne, currentRotateTwo, currentRotateThree, currentR
             gltfLoader.load(`./../../../model/RingDraco/pipkaDoorDraco.gltf`, (gltf) => {
 
                 while (gltf.scene.children.length) {
-                    // gltf.scene.children[0].material.envMap = env;
                     if (gltf.scene.children[0].name.includes("rotateOne")) {
                         rotateOne.add(gltf.scene.children[0])}
                     else if (gltf.scene.children[0].name.includes("rotateTwo")) {

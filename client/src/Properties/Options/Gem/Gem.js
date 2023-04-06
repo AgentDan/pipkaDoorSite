@@ -78,25 +78,6 @@ const Gem = ({
             <div className="flex flex-wrap">
 
                 {
-                    currentRotateTwo.name === "a1" ? (
-                        <div className="">
-                            <button
-                                className="w-24 h-12 m-2 text-xs bg-gray-500 hover:bg-gray-700 text-grey-700 font-semibold hover:text-white py-2 px-4 border border-gray-700 hover:border-transparent rounded">
-                                Квадратный черный
-                            </button>
-                        </div>
-                    ) : (
-                        <div className="">
-                            <button
-                                onClick={() => two("a1")}
-                                className="w-24 h-12 m-2 text-xs bg-transparent hover:bg-gray-700 text-grey-700 font-semibold hover:text-white py-2 px-4 border border-gray-700 hover:border-transparent rounded">
-                                Квадратный черный
-                            </button>
-                        </div>
-                    )
-                }
-
-                {
                     currentRotateTwo.name === "a2" ? (
                         <div className="">
                             <button
@@ -110,6 +91,25 @@ const Gem = ({
                                 onClick={() => two("a2")}
                                 className="w-24 h-12 m-2 text-xs bg-transparent hover:bg-gray-700 text-grey-700 font-semibold hover:text-white py-2 px-4 border border-gray-700 hover:border-transparent rounded">
                                 Круглый хром
+                            </button>
+                        </div>
+                    )
+                }
+
+                {
+                    currentRotateTwo.name === "a1" ? (
+                        <div className="">
+                            <button
+                                className="w-24 h-12 m-2 text-xs bg-gray-500 hover:bg-gray-700 text-grey-700 font-semibold hover:text-white py-2 px-4 border border-gray-700 hover:border-transparent rounded">
+                                Квадратный черный
+                            </button>
+                        </div>
+                    ) : (
+                        <div className="">
+                            <button
+                                onClick={() => two("a1")}
+                                className="w-24 h-12 m-2 text-xs bg-transparent hover:bg-gray-700 text-grey-700 font-semibold hover:text-white py-2 px-4 border border-gray-700 hover:border-transparent rounded">
+                                Квадратный черный
                             </button>
                         </div>
                     )
