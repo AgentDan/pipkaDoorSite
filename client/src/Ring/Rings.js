@@ -46,16 +46,16 @@ const Ring = ({ currentRotateOne, currentRotateTwo, currentRotateThree, currentR
             window.addEventListener("resize", resize);
 
             //envMap
-            // const cubeTextureLoader = new THREE.CubeTextureLoader()
-            // const env = cubeTextureLoader.load([
-            //     "./model/envMap/px.png",
-            //     "./model/envMap/nx.png",
-            //     "./model/envMap/py.png",
-            //     "./model/envMap/ny.png",
-            //     "./model/envMap/pz.png",
-            //     "./model/envMap/nz.png",
-            // ])
-            // scene.environment = env
+            const cubeTextureLoader = new THREE.CubeTextureLoader()
+            const env = cubeTextureLoader.load([
+                "./model/envMap/px.png",
+                "./model/envMap/nx.png",
+                "./model/envMap/py.png",
+                "./model/envMap/ny.png",
+                "./model/envMap/pz.png",
+                "./model/envMap/nz.png",
+            ])
+            scene.environment = env
 
             //Grupos
             const rotateOne = new THREE.Group()
