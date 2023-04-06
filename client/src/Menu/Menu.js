@@ -24,13 +24,13 @@ const Menu = () => {
                         currentRotateThree={currentRotateThree}
                         currentRotateFour={currentRotateFour}
                     />
-                    {/*<Rings*/}
-                    {/*    currentRotateOne={currentRotateOne}*/}
-                    {/*    currentRotateTwo={currentRotateTwo}*/}
-                    {/*    currentRotateThree={currentRotateThree}*/}
-                    {/*    currentRotateFour={currentRotateFour}*/}
-                    {/*/>*/}
-                    <Render3d/>
+                    <Rings
+                        currentRotateOne={currentRotateOne}
+                        currentRotateTwo={currentRotateTwo}
+                        currentRotateThree={currentRotateThree}
+                        currentRotateFour={currentRotateFour}
+                    />
+                    {/*<Render3d/>*/}
                 </Wrapper>
             </GeneralContainer>
             <Futer/>
