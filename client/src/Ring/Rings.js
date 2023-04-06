@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react"
+import React, { useRef, useEffect } from "react"
 import * as THREE from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
@@ -46,16 +46,16 @@ const Ring = ({ currentRotateOne, currentRotateTwo, currentRotateThree, currentR
             window.addEventListener("resize", resize);
 
             //envMap
-            const cubeTextureLoader = new THREE.CubeTextureLoader()
-            const env = cubeTextureLoader.load([
-                "./model/envMap/px.png",
-                "./model/envMap/nx.png",
-                "./model/envMap/py.png",
-                "./model/envMap/ny.png",
-                "./model/envMap/pz.png",
-                "./model/envMap/nz.png",
-            ])
-            scene.environment = env
+            // const cubeTextureLoader = new THREE.CubeTextureLoader()
+            // const env = cubeTextureLoader.load([
+            //     "./model/envMap/px.png",
+            //     "./model/envMap/nx.png",
+            //     "./model/envMap/py.png",
+            //     "./model/envMap/ny.png",
+            //     "./model/envMap/pz.png",
+            //     "./model/envMap/nz.png",
+            // ])
+            // scene.environment = env
 
             //Grupos
             const rotateOne = new THREE.Group()
@@ -66,11 +66,11 @@ const Ring = ({ currentRotateOne, currentRotateTwo, currentRotateThree, currentR
 
             //Loaders
             const dracoLoader = new DRACOLoader()
-            dracoLoader.setDecoderPath("./Draco/")
+            dracoLoader.setDecoderPath("./../../../draco/")
 
             const gltfLoader = new GLTFLoader()
             gltfLoader.setDRACOLoader(dracoLoader)
-            gltfLoader.load("./model/RingDraco/pipkaDoorDraco.gltf", (gltf) => {
+            gltfLoader.load(`./../../../model/RingDraco/pipkaDoorDraco.gltf`, (gltf) => {
 
                 while (gltf.scene.children.length) {
                     // gltf.scene.children[0].material.envMap = env;
@@ -207,8 +207,9 @@ const Ring = ({ currentRotateOne, currentRotateTwo, currentRotateThree, currentR
         <div
             className='Contenedor3D'
             ref={mountRef}
-            style={{ width: "100%", height: "100%" }}
-        ></div>
+            style={{ width: "100%", height: "100vh" }}
+        >
+        </div>
     )
 }
 
